@@ -1,0 +1,29 @@
+# load a force field
+#source leaprc.protein.ff14SB
+source leaprc.water.opc
+
+# Load a PDB file
+mol = loadPdb Wat2000.pdb
+
+# Calculate total charge of the molecule
+charge mol
+
+# Set box size
+set mol box { 44.0 44.0 44.0 }
+
+# Save topology and coordinate files
+saveAmberParm mol Wat.parm7 Wat.rst7
+
+# Save the model a PDB file
+savePdb mol Wat.pdb
+
+# Quit
+quit
+
+~
+~
+~
+~
+~
+~
+
